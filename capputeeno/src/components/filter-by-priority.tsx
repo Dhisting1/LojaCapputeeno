@@ -40,6 +40,7 @@ const PriorityFilter = styled.ul`
     width: 250px;
     position: absolute;
     top: 100%;
+    right: 8px;
     z-index: 999;
     background-color: #ffffff;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
