@@ -40,7 +40,7 @@ const PriorityFilter = styled.ul`
     width: 250px;
     position: absolute;
     top: 100%;
-    
+    z-index: 999;
     background-color: #ffffff;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
@@ -79,7 +79,7 @@ export function FilterByPriority(props: FilterByPriorityProps) {
                 isOpen &&
                 <PriorityFilter>
                     <li onClick={() => handleUpdatePriority(PriorityTypes.NEWS)}>Novidades</li>
-                    <li onClick={() => handleUpdatePriority(PriorityTypes.BIGGETS_PRICE)}>Preço: Maior - Menor</li>
+                    <li onClick={() => handleUpdatePriority(PriorityTypes.BIGGEST_PRICE)}>Preço: Maior - Menor</li>
                     <li onClick={() => handleUpdatePriority(PriorityTypes.MINOR_PRICE)}>Preço: Menor - Maior</li>
                     <li onClick={() => handleUpdatePriority(PriorityTypes.POPULARITY)}>Mais Vendidos</li>
                 </PriorityFilter>
