@@ -1,4 +1,4 @@
-import { formatValue } from "@/utils/format-value"
+import { formatPrice } from "@/utils/format-value"
 import styled from "styled-components"
 
 interface ProductCardProps {
@@ -65,7 +65,7 @@ export function ProductCard(props: ProductCardProps) {
             <div>
                 <h3>{props.title}</h3>
                 <div></div>
-                <p>{formatValue(props.price)}</p>
+                <p>{formatPrice(props.price)}</p>
             </div>
         </Card>
     )
