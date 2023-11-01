@@ -2,7 +2,6 @@ import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { CartIcon } from "./icons/cart-icon";
 import styled from "styled-components";
 
-
 const CartCount = styled.span`
     width: 17px;
     height: 17px;
@@ -18,7 +17,9 @@ const CartCount = styled.span`
 
 const Container = styled.div`  
     position: relative;
-
+    cursor: pointer;
+    border: none;
+    background: transparent;
 `
 
 export function CartControl() {

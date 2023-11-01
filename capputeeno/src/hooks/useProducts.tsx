@@ -17,9 +17,11 @@ export function useProducts() {
     const { type, priority, search } = useFilter()
     const searchDeferred = useDeferredValue(search)
     const query = moutQuery(type, priority)
+
     const { data } = useQuery({
         queryFn: () => fetcher(query),
         queryKey: ['products', type, priority],
+        staleTime: 1000 * 60 * 1
     })
 
     const products = data?.data?.data?.allProducts
