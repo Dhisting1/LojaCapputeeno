@@ -5,6 +5,7 @@ import { Saira_Stencil_One } from 'next/font/google'
 import { PrimaryInputWSearchIcon } from "./primary-input"
 import { CartControl } from "./cart-control"
 import { useFilter } from "@/hooks/useFilter"
+import { useRouter } from "next/navigation"
 
 
 /*  Fonte */
@@ -38,18 +39,23 @@ const Logo = styled.a`
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
+    cursor: pointer;
+    text-decoration: none;
+
     @media(min-width: ${props => props.theme.tabletBreakpoint}){
         font-size: 24px;
     }
     @media(min-width: ${props => props.theme.desktopBreakpoint}){
         font-size: 40px;
     }
+
 `
 export default function Header() {
     const { setSearch, search } = useFilter()
+
     return (
         <TagHeader>
-            <Logo className={sairaStencil.className}>Capputeeno</Logo>
+            <Logo href="/" className={sairaStencil.className}>Capputeeno</Logo>
             <div>
                 <PrimaryInputWSearchIcon
                     value={search}
